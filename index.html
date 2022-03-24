@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interruptor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="box-contenido">
+            <div class="container-foco-led">
+                <div class="foco-led"></div>
+            </div>
+            <input type="checkbox">
+        </div>
+    </div>
+    <script>
+        let btn = document.querySelector('input');
+        let body = document.querySelector('body');
+        let contador = 0;
+
+        btn.addEventListener('click', function(){
+            if (contador == 0) {
+                body.style.background="#fff";
+                body.style.transition=".5s";
+                contador = 1;
+            }else{
+                body.style.background="#000";
+                contador = 0;
+            }
+        })
+    </script>
+</body>
+
+</html>
